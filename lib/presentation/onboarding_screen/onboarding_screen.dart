@@ -197,4 +197,8 @@ class OnboardingScreen extends GetWidget<OnboardingController> {
   onTapImgBG() {
     Get.toNamed(AppRoutes.loginScreen);
   }
+
+  onTapSignUp() {
+    Get.toNamed(AppRoutes.appLaunchScreen);
+  }
 }

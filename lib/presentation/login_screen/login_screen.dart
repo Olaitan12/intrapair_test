@@ -1,3 +1,6 @@
+import 'package:intrapair_test/presentation/forgot_password_screen/forgot_password_screen.dart';
+import 'package:intrapair_test/presentation/sign_up_screen/sign_up_screen.dart';
+
 import 'controller/login_controller.dart';
 import 'package:intrapair_test/core/app_export.dart';
 import 'package:flutter/material.dart';
@@ -312,17 +315,27 @@ class LoginScreen extends GetWidget<LoginController> {
                                   60.00,
                                 ),
                               ),
-                              child: Text(
-                                "msg_forgot_password".tr,
-                                overflow: TextOverflow.ellipsis,
-                                textAlign: TextAlign.center,
-                                style:
-                                    AppStyle.textstylepoppinsmedium12.copyWith(
-                                  fontSize: getFontSize(
-                                    12,
+                              child: TextButton(
+                                onPressed: () {
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) =>
+                                            ForgotPasswordScreen()),
+                                  );
+                                },
+                                child: Text(
+                                  "msg_forgot_password".tr,
+                                  overflow: TextOverflow.ellipsis,
+                                  textAlign: TextAlign.center,
+                                  style: AppStyle.textstylepoppinsmedium12
+                                      .copyWith(
+                                    fontSize: getFontSize(
+                                      12,
+                                    ),
+                                    height: 1.67,
+                                    decoration: TextDecoration.underline,
                                   ),
-                                  height: 1.67,
-                                  decoration: TextDecoration.underline,
                                 ),
                               ),
                             ),
@@ -351,13 +364,22 @@ class LoginScreen extends GetWidget<LoginController> {
                                 ),
                                 decoration:
                                     AppDecoration.textstylepoppinsmedium16,
-                                child: Text(
-                                  "lbl_log_in".tr,
-                                  textAlign: TextAlign.center,
-                                  style: AppStyle.textstylepoppinsmedium16
-                                      .copyWith(
-                                    fontSize: getFontSize(
-                                      16,
+                                child: TextButton(
+                                  onPressed: () {
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) => SignUpScreen()),
+                                    );
+                                  },
+                                  child: Text(
+                                    "lbl_log_in".tr,
+                                    textAlign: TextAlign.center,
+                                    style: AppStyle.textstylepoppinsmedium16
+                                        .copyWith(
+                                      fontSize: getFontSize(
+                                        16,
+                                      ),
                                     ),
                                   ),
                                 ),
@@ -434,48 +456,57 @@ class LoginScreen extends GetWidget<LoginController> {
                                   22.00,
                                 ),
                               ),
-                              child: RichText(
-                                text: TextSpan(
-                                  children: [
-                                    TextSpan(
-                                      text: "msg_don_t_have_an_a2".tr,
-                                      style: TextStyle(
-                                        color: ColorConstant.bluegray400,
-                                        fontSize: getFontSize(
-                                          14,
+                              child: TextButton(
+                                onPressed: () {
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => SignUpScreen()),
+                                  );
+                                },
+                                child: RichText(
+                                  text: TextSpan(
+                                    children: [
+                                      TextSpan(
+                                        text: "msg_don_t_have_an_a2".tr,
+                                        style: TextStyle(
+                                          color: ColorConstant.bluegray400,
+                                          fontSize: getFontSize(
+                                            14,
+                                          ),
+                                          fontFamily: 'Poppins',
+                                          fontWeight: FontWeight.w400,
+                                          height: 1.57,
                                         ),
-                                        fontFamily: 'Poppins',
-                                        fontWeight: FontWeight.w400,
-                                        height: 1.57,
                                       ),
-                                    ),
-                                    TextSpan(
-                                      text: ' ',
-                                      style: TextStyle(
-                                        color: ColorConstant.gray900,
-                                        fontSize: getFontSize(
-                                          14,
+                                      TextSpan(
+                                        text: ' ',
+                                        style: TextStyle(
+                                          color: ColorConstant.gray900,
+                                          fontSize: getFontSize(
+                                            14,
+                                          ),
+                                          fontFamily: 'Poppins',
+                                          fontWeight: FontWeight.w400,
+                                          height: 1.57,
                                         ),
-                                        fontFamily: 'Poppins',
-                                        fontWeight: FontWeight.w400,
-                                        height: 1.57,
                                       ),
-                                    ),
-                                    TextSpan(
-                                      text: "lbl_sign_up".tr,
-                                      style: TextStyle(
-                                        color: ColorConstant.purple800,
-                                        fontSize: getFontSize(
-                                          14,
+                                      TextSpan(
+                                        text: "lbl_sign_up".tr,
+                                        style: TextStyle(
+                                          color: ColorConstant.purple800,
+                                          fontSize: getFontSize(
+                                            14,
+                                          ),
+                                          fontFamily: 'Poppins',
+                                          fontWeight: FontWeight.w700,
+                                          height: 1.57,
                                         ),
-                                        fontFamily: 'Poppins',
-                                        fontWeight: FontWeight.w700,
-                                        height: 1.57,
                                       ),
-                                    ),
-                                  ],
+                                    ],
+                                  ),
+                                  textAlign: TextAlign.center,
                                 ),
-                                textAlign: TextAlign.center,
                               ),
                             ),
                           ),

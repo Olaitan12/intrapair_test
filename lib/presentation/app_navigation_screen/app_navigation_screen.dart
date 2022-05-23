@@ -1,3 +1,7 @@
+import 'package:intrapair_test/presentation/change_password_screen/change_password_screen.dart';
+import 'package:intrapair_test/presentation/forgot_password_screen/forgot_password_screen.dart';
+import 'package:intrapair_test/presentation/sign_up_screen/sign_up_screen.dart';
+
 import 'controller/app_navigation_controller.dart';
 import 'package:intrapair_test/core/app_export.dart';
 import 'package:flutter/material.dart';
@@ -58,20 +62,284 @@ class AppNavigationScreen extends GetWidget<AppNavigationController> {
                                         color: ColorConstant.black900))
                               ])),
                       Expanded(
-                          child: Align(
-                              alignment: Alignment.center,
-                              child: SingleChildScrollView(
-                                  child: Container(
+                        child: Align(
+                          alignment: Alignment.center,
+                          child: SingleChildScrollView(
+                            child: Container(
+                              decoration:
+                                  BoxDecoration(color: ColorConstant.whiteA700),
+                              child: Column(
+                                mainAxisSize: MainAxisSize.min,
+                                mainAxisAlignment: MainAxisAlignment.start,
+                                children: [
+                                  GestureDetector(
+                                      onTap: () {
+                                        onTapOnboarding();
+                                      },
+                                      child: Container(
+                                          width: size.width,
+                                          decoration: BoxDecoration(
+                                              color: ColorConstant.whiteA700),
+                                          child: Column(
+                                              mainAxisSize: MainAxisSize.min,
+                                              mainAxisAlignment:
+                                                  MainAxisAlignment.start,
+                                              children: [
+                                                Align(
+                                                    alignment:
+                                                        Alignment.centerLeft,
+                                                    child: Padding(
+                                                        padding: EdgeInsets.only(
+                                                            left: getHorizontalSize(
+                                                                20.00),
+                                                            top: getVerticalSize(
+                                                                10.00),
+                                                            right:
+                                                                getHorizontalSize(
+                                                                    20.00),
+                                                            bottom:
+                                                                getVerticalSize(
+                                                                    10.00)),
+                                                        child: Text(
+                                                            "lbl_onboarding".tr,
+                                                            overflow:
+                                                                TextOverflow
+                                                                    .ellipsis,
+                                                            textAlign: TextAlign
+                                                                .center,
+                                                            style: AppStyle
+                                                                .textstyleregular20
+                                                                .copyWith(
+                                                                    fontSize:
+                                                                        getFontSize(20))))),
+                                                Container(
+                                                    height:
+                                                        getVerticalSize(1.00),
+                                                    width: size.width,
+                                                    margin: EdgeInsets.only(
+                                                        top: getVerticalSize(
+                                                            5.00)),
+                                                    decoration: BoxDecoration(
+                                                        color: ColorConstant
+                                                            .bluegray401))
+                                              ]))),
+                                  GestureDetector(
+                                      onTap: () {
+                                        onTapAppLaunch();
+                                      },
+                                      child: Container(
+                                          width: size.width,
+                                          decoration: BoxDecoration(
+                                              color: ColorConstant.whiteA700),
+                                          child: Column(
+                                              mainAxisSize: MainAxisSize.min,
+                                              mainAxisAlignment:
+                                                  MainAxisAlignment.start,
+                                              children: [
+                                                Align(
+                                                    alignment:
+                                                        Alignment.centerLeft,
+                                                    child: Padding(
+                                                        padding: EdgeInsets.only(
+                                                            left: getHorizontalSize(
+                                                                20.00),
+                                                            top: getVerticalSize(
+                                                                10.00),
+                                                            right:
+                                                                getHorizontalSize(
+                                                                    20.00),
+                                                            bottom:
+                                                                getVerticalSize(
+                                                                    10.00)),
+                                                        child: Text(
+                                                            "lbl_app_launch".tr,
+                                                            overflow:
+                                                                TextOverflow
+                                                                    .ellipsis,
+                                                            textAlign: TextAlign
+                                                                .center,
+                                                            style: AppStyle
+                                                                .textstyleregular20
+                                                                .copyWith(
+                                                                    fontSize:
+                                                                        getFontSize(20))))),
+                                                Container(
+                                                    height:
+                                                        getVerticalSize(1.00),
+                                                    width: size.width,
+                                                    margin: EdgeInsets.only(
+                                                        top: getVerticalSize(
+                                                            5.00)),
+                                                    decoration: BoxDecoration(
+                                                        color: ColorConstant
+                                                            .bluegray401))
+                                              ]))),
+                                  GestureDetector(
+                                    onTap: () {
+                                      onTapLogin();
+                                    },
+                                    child: Container(
+                                      width: size.width,
                                       decoration: BoxDecoration(
                                           color: ColorConstant.whiteA700),
                                       child: Column(
-                                          mainAxisSize: MainAxisSize.min,
-                                          mainAxisAlignment:
-                                              MainAxisAlignment.start,
-                                          children: [
-                                            GestureDetector(
+                                        mainAxisSize: MainAxisSize.min,
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.start,
+                                        children: [
+                                          Align(
+                                              alignment: Alignment.centerLeft,
+                                              child: Padding(
+                                                  padding: EdgeInsets.only(
+                                                      left: getHorizontalSize(
+                                                          20.00),
+                                                      top: getVerticalSize(
+                                                          10.00),
+                                                      right: getHorizontalSize(
+                                                          20.00),
+                                                      bottom: getVerticalSize(
+                                                          10.00)),
+                                                  child: Text("lbl_login2".tr,
+                                                      overflow:
+                                                          TextOverflow.ellipsis,
+                                                      textAlign:
+                                                          TextAlign.center,
+                                                      style: AppStyle
+                                                          .textstyleregular20
+                                                          .copyWith(
+                                                              fontSize:
+                                                                  getFontSize(
+                                                                      20))))),
+                                          Container(
+                                              height: getVerticalSize(1.00),
+                                              width: size.width,
+                                              margin: EdgeInsets.only(
+                                                  top: getVerticalSize(5.00)),
+                                              decoration: BoxDecoration(
+                                                  color: ColorConstant
+                                                      .bluegray401))
+                                        ],
+                                      ),
+                                    ),
+                                  ),
+                                  GestureDetector(
+                                    onTap: () {
+                                      Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                          builder: (context) => SignUpScreen(),
+                                        ),
+                                      );
+                                    },
+                                    child: Container(
+                                      width: size.width,
+                                      decoration: BoxDecoration(
+                                          color: ColorConstant.whiteA700),
+                                      child: Column(
+                                        mainAxisSize: MainAxisSize.min,
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.start,
+                                        children: [
+                                          Align(
+                                              alignment: Alignment.centerLeft,
+                                              child: Padding(
+                                                  padding: EdgeInsets.only(
+                                                      left: getHorizontalSize(
+                                                          20.00),
+                                                      top: getVerticalSize(
+                                                          10.00),
+                                                      right: getHorizontalSize(
+                                                          20.00),
+                                                      bottom: getVerticalSize(
+                                                          10.00)),
+                                                  child: Text("lbl_login2".tr,
+                                                      overflow:
+                                                          TextOverflow.ellipsis,
+                                                      textAlign:
+                                                          TextAlign.center,
+                                                      style: AppStyle
+                                                          .textstyleregular20
+                                                          .copyWith(
+                                                              fontSize:
+                                                                  getFontSize(
+                                                                      20))))),
+                                          Container(
+                                              height: getVerticalSize(1.00),
+                                              width: size.width,
+                                              margin: EdgeInsets.only(
+                                                  top: getVerticalSize(5.00)),
+                                              decoration: BoxDecoration(
+                                                  color: ColorConstant
+                                                      .bluegray401))
+                                        ],
+                                      ),
+                                    ),
+                                  ),
+                                  GestureDetector(
+                                      onTap: () {
+                                        Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                            builder: (context) =>
+                                                ChangePasswordScreen(),
+                                          ),
+                                        );
+                                      },
+                                      child: Container(
+                                          width: size.width,
+                                          decoration: BoxDecoration(
+                                              color: ColorConstant.whiteA700),
+                                          child: Column(
+                                              mainAxisSize: MainAxisSize.min,
+                                              mainAxisAlignment:
+                                                  MainAxisAlignment.start,
+                                              children: [
+                                                Align(
+                                                    alignment:
+                                                        Alignment.centerLeft,
+                                                    child: Padding(
+                                                        padding: EdgeInsets.only(
+                                                            left: getHorizontalSize(
+                                                                20.00),
+                                                            top: getVerticalSize(
+                                                                10.00),
+                                                            right:
+                                                                getHorizontalSize(
+                                                                    20.00),
+                                                            bottom:
+                                                                getVerticalSize(
+                                                                    10.00)),
+                                                        child: Text("lbl_change_password".tr,
+                                                            overflow:
+                                                                TextOverflow
+                                                                    .ellipsis,
+                                                            textAlign: TextAlign
+                                                                .center,
+                                                            style: AppStyle
+                                                                .textstyleregular20
+                                                                .copyWith(
+                                                                    fontSize:
+                                                                        getFontSize(20))))),
+                                                Container(
+                                                    height:
+                                                        getVerticalSize(1.00),
+                                                    width: size.width,
+                                                    margin: EdgeInsets.only(
+                                                        top: getVerticalSize(
+                                                            5.00)),
+                                                    decoration: BoxDecoration(
+                                                        color: ColorConstant
+                                                            .bluegray402))
+                                              ]))),
+                                              GestureDetector(
                                                 onTap: () {
-                                                  onTapOnboarding();
+                                                  Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                            builder: (context) =>
+                                                ChangePasswordScreen(),
+                                          ),
+                                        );
                                                 },
                                                 child: Container(
                                                     width: size.width,
@@ -99,7 +367,7 @@ class AppNavigationScreen extends GetWidget<AppNavigationController> {
                                                                       bottom: getVerticalSize(
                                                                           10.00)),
                                                                   child: Text(
-                                                                      "lbl_onboarding"
+                                                                      "lbl_forgot_password"
                                                                           .tr,
                                                                       overflow:
                                                                           TextOverflow
@@ -122,119 +390,14 @@ class AppNavigationScreen extends GetWidget<AppNavigationController> {
                                                               decoration:
                                                                   BoxDecoration(
                                                                       color: ColorConstant
-                                                                          .bluegray401))
+                                                                          .bluegray402))
                                                         ]))),
-                                            GestureDetector(
-                                                onTap: () {
-                                                  onTapAppLaunch();
-                                                },
-                                                child: Container(
-                                                    width: size.width,
-                                                    decoration: BoxDecoration(
-                                                        color: ColorConstant
-                                                            .whiteA700),
-                                                    child: Column(
-                                                        mainAxisSize:
-                                                            MainAxisSize.min,
-                                                        mainAxisAlignment:
-                                                            MainAxisAlignment
-                                                                .start,
-                                                        children: [
-                                                          Align(
-                                                              alignment: Alignment
-                                                                  .centerLeft,
-                                                              child: Padding(
-                                                                  padding: EdgeInsets.only(
-                                                                      left: getHorizontalSize(
-                                                                          20.00),
-                                                                      top: getVerticalSize(
-                                                                          10.00),
-                                                                      right: getHorizontalSize(
-                                                                          20.00),
-                                                                      bottom: getVerticalSize(
-                                                                          10.00)),
-                                                                  child: Text(
-                                                                      "lbl_app_launch"
-                                                                          .tr,
-                                                                      overflow:
-                                                                          TextOverflow
-                                                                              .ellipsis,
-                                                                      textAlign:
-                                                                          TextAlign
-                                                                              .center,
-                                                                      style: AppStyle
-                                                                          .textstyleregular20
-                                                                          .copyWith(fontSize: getFontSize(20))))),
-                                                          Container(
-                                                              height:
-                                                                  getVerticalSize(
-                                                                      1.00),
-                                                              width: size.width,
-                                                              margin: EdgeInsets
-                                                                  .only(
-                                                                      top: getVerticalSize(
-                                                                          5.00)),
-                                                              decoration:
-                                                                  BoxDecoration(
-                                                                      color: ColorConstant
-                                                                          .bluegray401))
-                                                        ]))),
-                                            GestureDetector(
-                                                onTap: () {
-                                                  onTapLogin();
-                                                },
-                                                child: Container(
-                                                    width: size.width,
-                                                    decoration: BoxDecoration(
-                                                        color: ColorConstant
-                                                            .whiteA700),
-                                                    child: Column(
-                                                        mainAxisSize:
-                                                            MainAxisSize.min,
-                                                        mainAxisAlignment:
-                                                            MainAxisAlignment
-                                                                .start,
-                                                        children: [
-                                                          Align(
-                                                              alignment: Alignment
-                                                                  .centerLeft,
-                                                              child: Padding(
-                                                                  padding: EdgeInsets.only(
-                                                                      left: getHorizontalSize(
-                                                                          20.00),
-                                                                      top: getVerticalSize(
-                                                                          10.00),
-                                                                      right: getHorizontalSize(
-                                                                          20.00),
-                                                                      bottom: getVerticalSize(
-                                                                          10.00)),
-                                                                  child: Text(
-                                                                      "lbl_login2"
-                                                                          .tr,
-                                                                      overflow:
-                                                                          TextOverflow
-                                                                              .ellipsis,
-                                                                      textAlign:
-                                                                          TextAlign
-                                                                              .center,
-                                                                      style: AppStyle
-                                                                          .textstyleregular20
-                                                                          .copyWith(fontSize: getFontSize(20))))),
-                                                          Container(
-                                                              height:
-                                                                  getVerticalSize(
-                                                                      1.00),
-                                                              width: size.width,
-                                                              margin: EdgeInsets
-                                                                  .only(
-                                                                      top: getVerticalSize(
-                                                                          5.00)),
-                                                              decoration:
-                                                                  BoxDecoration(
-                                                                      color: ColorConstant
-                                                                          .bluegray401))
-                                                        ])))
-                                          ])))))
+                                ],
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
                     ]))));
   }
 
